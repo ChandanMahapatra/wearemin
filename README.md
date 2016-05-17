@@ -28,3 +28,5 @@ https://docs.particle.io/reference/firmware/photon
 https://community.particle.io/t/tutorial-getting-started-with-spark-publish/3422
 
 https://github.com/twbs/bootstrap
+
+https://learn.sparkfun.com/tutorials/photon-imu-shield-hookup-guide
