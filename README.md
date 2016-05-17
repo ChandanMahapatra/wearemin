@@ -21,4 +21,8 @@ We took the melody of “Happy Birthday” for the purpose of this study. The ap
 
 ![Web Application](https://raw.githubusercontent.com/chandan-mahapatra/wearemin/master/web-application.png)
 
+### Credit
 
+https://docs.particle.io/reference/firmware/photon
+https://community.particle.io/t/tutorial-getting-started-with-spark-publish/3422
+https://github.com/twbs/bootstrap
