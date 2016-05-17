@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head> 
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">    
+    <link href="bootstrap.css" rel="stylesheet">
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        
+    <link href="styles.css" rel="stylesheet">   
+        
+<body>
+    
+    <span id="Notes"></span>
+
+
+    <br><br>
+    <button onclick="start()">Connect</button>
+
+    
+    <script type="text/javascript">
+    function start() {
+
+        document.getElementById("Notes").innerHTML = "Waiting for data...";
+        var deviceID = "3d0031001747343337363432";
+        var accessToken = "b789c597f2efed087a84cf359d7ece0c3b731246";
+        var eventSource = new EventSource("https://api.spark.io/v1/devices/" + deviceID + "/events/?access_token=" + accessToken);
+
+        eventSource.addEventListener('open', function(e) {
+            console.log("Opened!"); },false);
+
+        eventSource.addEventListener('error', function(e) {
+            console.log("Errored!"); },false);
+
+        eventSource.addEventListener('Notes', function(e) {
+            var parsedData = JSON.parse(e.data);
+            var tempSpan = document.getElementById("Notes");
+     
+
+            
+            if ((parsedData.data) == "262")
+                {
+                 var colorbox = document.querySelector("#box1");
+                 colorbox.classList.remove("boxnc");  
+                 var colorbox = document.querySelector("#box2");
+                 colorbox.classList.remove("boxc");  
+                 var colorbox = document.querySelector("#box2");
+                 colorbox.classList.add("boxnc");      
+                 var colorbox = document.querySelector("#box3");
+                 colorbox.classList.remove("boxc");
+                  var colorbox = document.querySelector("#box3");
+                 colorbox.classList.add("boxnc");       
+                 var colorbox = document.querySelector("#box4");
+                 colorbox.classList.remove("boxc");
+                  var colorbox = document.querySelector("#box4");
+                 colorbox.classList.add("boxnc");      
+                 var colorbox = document.querySelector("#box5");
+                 colorbox.classList.remove("boxc");
+                  var colorbox = document.querySelector("#box5");
+                 colorbox.classList.add("boxnc");      
+                 var colorbox = document.querySelector("#box6");
+                 colorbox.classList.remove("boxc");
+                  var colorbox = document.querySelector("#box6");
+                 colorbox.classList.add("boxnc");      
+                 var colorbox = document.querySelector("#box7");
+                 colorbox.classList.remove("boxc");
+                 var colorbox = document.querySelector("#box7");
+                 colorbox.classList.add("boxnc");      
+                 var colorbox = document.querySelector("#box8");
+                 colorbox.classList.remove("boxc");
+                  var colorbox = document.querySelector("#box8");
+                 colorbox.classList.add("boxnc");      
+                 var colorbox = document.querySelector("#box1");
+                 colorbox.classList.add("boxc");
+                
+                 tempSpan.innerHTML = "Theremin Real time Note data" + " " +
+                  "Core: " + parsedData.coreid + " Frequency: " + parsedData.data;
+                tempSpan.style.fontSize = "28px";     
+                }
+            else if((parsedData.data) == "294")
+                {
+                 var colorbox = document.querySelector("#box1");
+                 colorbox.classList.add("boxnc");  
+                 var colorbox = document.querySelector("#box2");
+                 colorbox.classList.remove("boxnc");  
+                 var colorbox = document.querySelector("#box1");
+                 colorbox.classList.remove("boxc");  
+                 var colorbox = document.querySelector("#box3");
+                 colorbox.classList.remove("boxc");
+                  var colorbox = document.querySelector("#box3");
+                 colorbox.classList.add("boxnc");      
+                 var colorbox = document.querySelector("#box4");
+                 colorbox.classList.remove("boxc");
+                 var colorbox = document.querySelector("#box4");
+                 colorbox.classList.add("boxnc");      
+                 var colorbox = document.querySelector("#box5");
+                 colorbox.classList.remove("boxc");
+                     var colorbox = document.querySelector("#box5");
+                 colorbox.classList.add("boxnc");  
+                 var colorbox = document.querySelector("#box6");
+                 colorbox.classList.remove("boxc");
+                     var colorbox = document.querySelector("#box6");
+                 colorbox.classList.add("boxnc");  
+                 var colorbox = document.querySelector("#box7");
+                 colorbox.classList.remove("boxc");
+                     var colorbox = document.querySelector("#box7");
+                 colorbox.classList.add("boxnc");  
+                 var colorbox = document.querySelector("#box8");
+                 colorbox.classList.remove("boxc");        
+                     var colorbox = document.querySelector("#box8");
+                 colorbox.classList.add("boxnc");  
+                 var colorbox = document.querySelector("#box2");
+                 colorbox.classList.add("boxc"); 
+           
+                
+                tempSpan.innerHTML = "Theremin Real time Note data" + " " +
+                  "Core: " + parsedData.coreid + " Frequency: " + parsedData.data;
+                tempSpan.style.fontSize = "28px";     
+                }
+             else if((parsedData.data) == "330")
+                {
+                 var colorbox = document.querySelector("#box1");
+                 colorbox.classList.add("boxnc");  
+                 var colorbox = document.querySelector("#box3");
+                 colorbox.classList.remove("boxnc");  
+                 var colorbox = document.querySelector("#box1");
+                 colorbox.classList.remove("boxc");  
+                 var colorbox = document.querySelector("#box2");
+                 colorbox.classList.remove("boxc");
+                  var colorbox = document.querySelector("#box2");
+                 colorbox.classList.add("boxnc");      
+                 var colorbox = document.querySelector("#box4");
+                 colorbox.classList.remove("boxc");
+                     var colorbox = document.querySelector("#box4");
+                 colorbox.classList.add("boxnc");  
+                 var colorbox = document.querySelector("#box5");
+                 colorbox.classList.remove("boxc");
+                     var colorbox = document.querySelector("#box5");
+                 colorbox.classList.add("boxnc");  
+                 var colorbox = document.querySelector("#box6");
+                 colorbox.classList.remove("boxc");
+                     var colorbox = document.querySelector("#box6");
+                 colorbox.classList.add("boxnc");  
+                 var colorbox = document.querySelector("#box7");
+                 colorbox.classList.remove("boxc");
+                     var colorbox = document.querySelector("#box7");
+                 colorbox.classList.add("boxnc");  
+                 var colorbox = document.querySelector("#box8");
+                 colorbox.classList.remove("boxc");    
+                     var colorbox = document.querySelector("#box8");
+                 colorbox.classList.add("boxnc");  
+                 var colorbox = document.querySelector("#box3");
+                 colorbox.classList.add("boxc");  
+                 
+                    
+                tempSpan.innerHTML = "Theremin Real time Note data" + " " +
+                  "Core: " + parsedData.coreid + " Frequency: " + parsedData.data;
+                tempSpan.style.fontSize = "28px";     
+                }
+             else if((parsedData.data) == "349")
+                {
+                 var colorbox = document.querySelector("#box1");
+                 colorbox.classList.add("boxnc");  
+                 var colorbox = document.querySelector("#box4");
+                 colorbox.classList.remove("boxnc");  
+                 var colorbox = document.querySelector("#box1");
+                 colorbox.classList.remove("boxc");  
+                 var colorbox = document.querySelector("#box2");
+                 colorbox.classList.remove("boxc");
+                     var colorbox = document.querySelector("#box2");
+                 colorbox.classList.add("boxnc");  
+                 var colorbox = document.querySelector("#box3");
+                 colorbox.classList.remove("boxc");
+                     var colorbox = document.querySelector("#box3");
+                 colorbox.classList.add("boxnc");  
+                 var colorbox = document.querySelector("#box5");
+                 colorbox.classList.remove("boxc");
+                     var colorbox = document.querySelector("#box5");
+                 colorbox.classList.add("boxnc");  
+                 var colorbox = document.querySelector("#box6");
+                 colorbox.classList.remove("boxc");
+                     var colorbox = document.querySelector("#box6");
+                 colorbox.classList.add("boxnc");  
+                 var colorbox = document.querySelector("#box7");
+                 colorbox.classList.remove("boxc");
+                     var colorbox = document.querySelector("#box7");
+                 colorbox.classList.add("boxnc");  
+                 var colorbox = document.querySelector("#box8");
+                 colorbox.classList.remove("boxc");   
+                     var colorbox = document.querySelector("#box8");
+                 colorbox.classList.add("boxnc");  
+                 var colorbox = document.querySelector("#box4");
+                 colorbox.classList.add("boxc");    
+                    
+                tempSpan.innerHTML = "Theremin Real time Note data" + " " +
+                  "Core: " + parsedData.coreid + " Frequency: " + parsedData.data;
+                tempSpan.style.fontSize = "28px";     
+                }
+             else if((parsedData.data) == "392")
+                {
+                 var colorbox = document.querySelector("#box1");
+                 colorbox.classList.add("boxnc");
+                 var colorbox = document.querySelector("#box5");
+                 colorbox.classList.remove("boxnc");     
+                 var colorbox = document.querySelector("#box1");
+                 colorbox.classList.remove("boxc");  
+                 var colorbox = document.querySelector("#box2");
+                 colorbox.classList.remove("boxc");
+                     var colorbox = document.querySelector("#box2");
+                 colorbox.classList.add("boxnc");  
+                 var colorbox = document.querySelector("#box3");
+                 colorbox.classList.remove("boxc");
+                     var colorbox = document.querySelector("#box3");
+                 colorbox.classList.add("boxnc");  
+                 var colorbox = document.querySelector("#box4");
+                 colorbox.classList.remove("boxc");
+                     var colorbox = document.querySelector("#box4");
+                 colorbox.classList.add("boxnc");  
+                 var colorbox = document.querySelector("#box6");
+                 colorbox.classList.remove("boxc");
+                     var colorbox = document.querySelector("#box6");
+                 colorbox.classList.add("boxnc");  
+                 var colorbox = document.querySelector("#box7");
+                 colorbox.classList.remove("boxc");
+                     var colorbox = document.querySelector("#box7");
+                 colorbox.classList.add("boxnc");  
+                 var colorbox = document.querySelector("#box8");
+                 colorbox.classList.remove("boxc"); 
+                     var colorbox = document.querySelector("#box8");
+                 colorbox.classList.add("boxnc");  
+                 var colorbox = document.querySelector("#box5");
+                 colorbox.classList.add("boxc");     
+                    
+                    
+                tempSpan.innerHTML = "Theremin Real time Note data" + " " +
+                  "Core: " + parsedData.coreid + " Frequency: " + parsedData.data;
+                tempSpan.style.fontSize = "28px"; 
+                }
+             else if((parsedData.data) == "440")
+                {
+                var colorbox = document.querySelector("#box1");
+                 colorbox.classList.add("boxnc");
+                 var colorbox = document.querySelector("#box6");
+                 colorbox.classList.remove("boxnc");      
+                 var colorbox = document.querySelector("#box1");
+                 colorbox.classList.remove("boxc");  
+                 var colorbox = document.querySelector("#box2");
+                 colorbox.classList.remove("boxc");
+                     var colorbox = document.querySelector("#box2");
+                 colorbox.classList.add("boxnc");  
+                 var colorbox = document.querySelector("#box3");
+                 colorbox.classList.remove("boxc");
+                     var colorbox = document.querySelector("#box3");
+                 colorbox.classList.add("boxnc");  
+                 var colorbox = document.querySelector("#box4");
+                 colorbox.classList.remove("boxc");
+                     var colorbox = document.querySelector("#box4");
+                 colorbox.classList.add("boxnc");  
+                 var colorbox = document.querySelector("#box5");
+                 colorbox.classList.remove("boxc");
+                     var colorbox = document.querySelector("#box5");
+                 colorbox.classList.add("boxnc");  
+                 var colorbox = document.querySelector("#box7");
+                 colorbox.classList.remove("boxc");
+                     var colorbox = document.querySelector("#box7");
+                 colorbox.classList.add("boxnc");  
+                 var colorbox = document.querySelector("#box8");
+                 colorbox.classList.remove("boxc"); 
+                     var colorbox = document.querySelector("#box8");
+                 colorbox.classList.add("boxnc");  
+                 var colorbox = document.querySelector("#box6");
+                 colorbox.classList.add("boxc"); 
+                    
+                tempSpan.innerHTML = "Theremin Real time Note data" + " " +
+                  "            Core: " + parsedData.coreid + "      Frequency: " + parsedData.data;
+                tempSpan.style.fontSize = "28px"; 
+                }
+             else if((parsedData.data) == "494")
+                {
+                var colorbox = document.querySelector("#box1");
+                 colorbox.classList.add("boxnc");  
+                 var colorbox = document.querySelector("#box7");
+                 colorbox.classList.remove("boxnc");      
+                 var colorbox = document.querySelector("#box1");
+                 colorbox.classList.remove("boxc");  
+                 var colorbox = document.querySelector("#box2");
+                 colorbox.classList.remove("boxc");
+                     var colorbox = document.querySelector("#box2");
+                 colorbox.classList.add("boxnc");  
+                 var colorbox = document.querySelector("#box3");
+                 colorbox.classList.remove("boxc");
+                     var colorbox = document.querySelector("#box3");
+                 colorbox.classList.add("boxnc");  
+                 var colorbox = document.querySelector("#box4");
+                 colorbox.classList.remove("boxc");
+                     var colorbox = document.querySelector("#box4");
+                 colorbox.classList.add("boxnc");  
+                 var colorbox = document.querySelector("#box5");
+                 colorbox.classList.remove("boxc");
+                     var colorbox = document.querySelector("#box5");
+                 colorbox.classList.add("boxnc");  
+                 var colorbox = document.querySelector("#box6");
+                 colorbox.classList.remove("boxc");
+                     var colorbox = document.querySelector("#box6");
+                 colorbox.classList.add("boxnc");  
+                 var colorbox = document.querySelector("#box8");
+                 colorbox.classList.remove("boxc"); 
+                     var colorbox = document.querySelector("#box8");
+                 colorbox.classList.add("boxnc");  
+                 var colorbox = document.querySelector("#box7");
+                 colorbox.classList.add("boxc"); 
+                    
+                tempSpan.innerHTML = "Theremin Real time Note data" + " " +
+                  "Core: " + parsedData.coreid + " Frequency: " + parsedData.data;
+                tempSpan.style.fontSize = "28px"; 
+                }
+             else if((parsedData.data) == "523")
+                {
+                var colorbox = document.querySelector("#box1");
+                 colorbox.classList.add("boxnc");  
+                 var colorbox = document.querySelector("#box8");
+                 colorbox.classList.remove("boxnc");      
+                 var colorbox = document.querySelector("#box1");
+                 colorbox.classList.remove("boxc");  
+                 var colorbox = document.querySelector("#box2");
+                 colorbox.classList.remove("boxc");
+                    var colorbox = document.querySelector("#box2");
+                 colorbox.classList.add("boxnc");  
+                 var colorbox = document.querySelector("#box3");
+                 colorbox.classList.remove("boxc");
+                     var colorbox = document.querySelector("#box3");
+                 colorbox.classList.add("boxnc");  
+                 var colorbox = document.querySelector("#box4");
+                 colorbox.classList.remove("boxc");
+                     var colorbox = document.querySelector("#box4");
+                 colorbox.classList.add("boxnc");  
+                 var colorbox = document.querySelector("#box5");
+                 colorbox.classList.remove("boxc");
+                     var colorbox = document.querySelector("#box5");
+                 colorbox.classList.add("boxnc");  
+                 var colorbox = document.querySelector("#box6");
+                 colorbox.classList.remove("boxc");
+                     var colorbox = document.querySelector("#box6");
+                 colorbox.classList.add("boxnc");  
+                 var colorbox = document.querySelector("#box7");
+                 colorbox.classList.remove("boxc");
+                     var colorbox = document.querySelector("#box7");
+                 colorbox.classList.add("boxnc");  
+                 var colorbox = document.querySelector("#box8");
+                 colorbox.classList.add("boxc");    
+                    
+                    
+                 tempSpan.innerHTML = "Theremin Real time Note data" + " " +
+                  "Core: " + parsedData.coreid + " Frequency: " + parsedData.data;
+                tempSpan.style.fontSize = "28px"; 
+                }
+            else
+                {
+                  tempSpan.innerHTML = "No Data";
+                }
+            
+              
+        }, false);
+    }
+    </script>
+    
+ <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="page-header">
+              <h1>Wear-emin &nbsp; &nbsp; &nbsp;
+                <font color="#777777">
+                  <span style="font-size: 23.3999996185303px; line-height: 23.3999996185303px;">A Digital Theremin</span>
+                </font>
+              </h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+        
+        
+    <div class="section">
+      <div class="container">
+        <div class="row">
+        <div class="col-md-12">
+            <h1>Notes</h1>
+          </div>
+            <div class="container gap"> 
+           <div class="col-md-3">
+            <div id="box8" class="boxnc"></div>
+          </div>
+          <div class="col-md-3">
+            <h2>C</h2>
+           </div>  
+        <div class="col-md-6 text-center">
+            <h2>Happy Birthday - Music Notes</h2>
+        </div>
+            </div>        
+        <div class="container gap">
+           <div class="col-md-3">
+            <div id="box7" class="boxnc"></div>
+          </div>
+          <div class="col-md-3">
+            <h2>b</h2>
+          </div>
+             <div class="col-md-6 text-center">
+            <h2>g&nbsp;&nbsp;&nbsp;g&nbsp;a&nbsp;&nbsp;&nbsp;g&nbsp;c&nbsp;b</h2>
+        </div>
+            </div>    
+        <div class="container gap">    
+           <div class="col-md-3">
+            <div id="box6" class="boxnc"></div>
+          </div>
+          <div class="col-md-3">
+            <h2>a</h2>
+          </div>
+        <div class="col-md-6 text-center">
+            <h2>g&nbsp;&nbsp;g&nbsp;&nbsp;&nbsp;a&nbsp;g&nbsp;&nbsp;&nbsp;d&nbsp;c</h2>
+        </div>    
+            </div>    
+        <div class="container gap">    
+          <div class="col-md-3">
+            <div id="box5" class="boxnc"></div>
+          </div>
+          <div class="col-md-3">
+            <h2>g</h2>
+          </div>
+         <div class="col-md-6 text-center">
+            <h2>g&nbsp;g&nbsp;g&nbsp;e&nbsp;&nbsp;&nbsp;c&nbsp;&nbsp;&nbsp;b&nbsp;a</h2>
+        </div>        
+          </div> 
+        <div class="container gap"> 
+           <div class="col-md-3">
+            <div id="box4" class="boxnc"></div>
+          </div>
+          <div class="col-md-3">
+            <h2>f</h2>
+           </div>
+            <div class="col-md-6 text-center">
+            <h2>f&nbsp;f&nbsp;e&nbsp;&nbsp;c&nbsp;&nbsp;c&nbsp;&nbsp;c</h2>
+        </div>   
+            </div>    
+         <div class="container gap">
+           <div class="col-md-3">
+            <div id="box3" class="boxnc"></div>
+          </div>
+          <div class="col-md-3">
+            <h2>e</h2>
+          </div> 
+            </div>    
+         <div class="container gap">    
+           <div class="col-md-3">
+            <div id="box2" class="boxnc"></div>
+          </div>
+          <div class="col-md-3">
+            <h2>d</h2>
+          </div>
+            </div>    
+         <div class="container gap">    
+          <div class="col-md-3">
+            <div id="box1" class="boxnc"></div>
+          </div>
+          <div class="col-md-3">
+            <h2>c</h2>
+          </div>
+          </div> 
+        </div>
+      </div>
+    </div>
+
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script> 
+            
+</body>
+</html>

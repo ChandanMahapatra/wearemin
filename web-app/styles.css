@@ -1,0 +1,20 @@
+.boxc{
+	width:200px;
+	height:60px;
+    border-radius: 25px;
+    border: 2px solid #2980B9;
+    background: #3498DB;
+}
+
+.boxnc{
+	width:200px;
+	height:60px;
+    border-radius: 25px;
+    border: 2px solid #2980B9;
+    background: white;
+}
+
+
+.gap{
+    padding-top: 10px;
+}
