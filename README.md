@@ -21,7 +21,7 @@ We took the melody of “Happy Birthday” for the purpose of this study. The ap
 
 ![Web Application](https://raw.githubusercontent.com/chandan-mahapatra/wearemin/master/web-application.png)
 
-### Credit
+#### Credit
 
 https://docs.particle.io/reference/firmware/photon
 
