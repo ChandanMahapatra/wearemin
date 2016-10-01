@@ -8,6 +8,10 @@ This was the final project for the Mobile HCI class (HCIN722) at Rochester Insti
 
 ![wear-emin](https://raw.githubusercontent.com/chandan-mahapatra/wearemin/master/wearemin.png)
 
+## Video
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/BEvPSjRtU2k" frameborder="0" allowfullscreen></iframe>
+
 
 ## Working
 
