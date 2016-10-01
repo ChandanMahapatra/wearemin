@@ -8,11 +8,6 @@ This was the final project for the Mobile HCI class (HCIN722) at Rochester Insti
 
 ![wear-emin](https://raw.githubusercontent.com/chandan-mahapatra/wearemin/master/wearemin.png)
 
-## Video
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/BEvPSjRtU2k" frameborder="0" allowfullscreen></iframe>
-
-
 ## Working
 
 First, put the wear-emin on the left hand, and then turn the device on, and activate the associated application. Using the Wear-emin is as simple as flexing one’s hand up and down at the wrist to navigate the musical scale. 
